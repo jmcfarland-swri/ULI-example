@@ -3,16 +3,18 @@ import time
 from paraatm.io.gnats import GnatsSimulationWrapper, GnatsEnvironment
 
 class GateToGate(GnatsSimulationWrapper):
-    def simulation(self):
+    def simulation(self, pushback_clearance_delay=7):
 
         GNATS_SIMULATION_STATUS_PAUSE = GnatsEnvironment.get_gnats_constant('GNATS_SIMULATION_STATUS_PAUSE')
         GNATS_SIMULATION_STATUS_ENDED = GnatsEnvironment.get_gnats_constant('GNATS_SIMULATION_STATUS_ENDED')
+        AIRCRAFT_CLEARANCE_PUSHBACK = GnatsEnvironment.get_gnats_constant('AIRCRAFT_CLEARANCE_PUSHBACK', 'AircraftClearance')
 
         DIR_share = GnatsEnvironment.share_dir
 
         simulationInterface = GnatsEnvironment.simulationInterface
         environmentInterface = GnatsEnvironment.environmentInterface
         aircraftInterface = GnatsEnvironment.aircraftInterface
+        controllerInterface = GnatsEnvironment.controllerInterface
 
         simulationInterface.clear_trajectory()
 
@@ -22,7 +24,7 @@ class GateToGate(GnatsSimulationWrapper):
 
         #     # Controller to set human error: delay time
         #     # Users can try the following setting and see the difference in trajectory
-        #controllerInterface.setDelayPeriod("SWA1897", AIRCRAFT_CLEARANCE_PUSHBACK, 7)
+        controllerInterface.setDelayPeriod("SWA1897", AIRCRAFT_CLEARANCE_PUSHBACK, 7)
         #controllerInterface.setDelayPeriod("SWA1897", AIRCRAFT_CLEARANCE_TAKEOFF, 20)
 
         simulationInterface.setupSimulation(22000, 30) # SFO - PHX
