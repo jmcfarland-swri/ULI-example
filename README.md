@@ -11,16 +11,16 @@ Many of the contributions here also make use of the [para-atm](https://github.co
 Some of the modules that can be found in the Research Collection include:
 <dl>
 
-  <dt><a href="para-atm/demo">PARA-ATM Demonstration</a></dt>
+  <dt><a href="para-atm-demo">PARA-ATM Demonstration</a></dt>
   <dd>Demonstration of the <tt>paraatm</tt> Python package</dd>
   
-  <dt><a href="human-performance/vcas">VCAS</a></dt>
+  <dt><a href="vcas">VCAS</a></dt>
   <dd>Voice Communication-Assisted Simulation</dd>
 
-  <dt><a href="safety-risk-uq/accident-risk">Accident Risk</a></dt>
+  <dt><a href="accident-risk">Accident Risk</a></dt>
   <dd>Convert NTSB aviation accident recordings into usable data and apply machine learning techniques to risk estimation pipeline</dd>
   
-  <dt><a href="info-fusion/svm-text-classifier">SVM Text Classifier</a></dt>
+  <dt><a href="svm-text-classifier">SVM Text Classifier</a></dt>
   <dd>Support Vector Machine for text classification into accident categories</dd>
   
 </dl>
