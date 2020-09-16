@@ -6,6 +6,8 @@ This repository contains work conducted under the NASA ULI project "Information 
 
 Many of the contributions here also make use of the [para-atm](https://github.com/ymlasu/para-atm) and [GNATS](https://github.com/OptimalSynthesisInc/GNATS) software.  para-atm is a Python package that provides a suite of tools to support research and analysis of national airspace safety.  GNATS is a Generalized National Airspace Trajectory Prediction system.
 
+For information about how to contribute, please see the [Guide for Contributing](https://github.com/jmcfarland-swri/ULI-example/wiki/Contributing).
+
 ## Modules
 
 Some of the modules that can be found in the Research Collection include:
